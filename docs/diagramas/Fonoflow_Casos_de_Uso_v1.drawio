@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<mxfile host="app.diagrams.net" modified="2026-11-14T00:00:00.000Z" agent="ChatGPT" version="24.7.17" type="device">
+  <diagram id="fonoflow-uc-v1" name="Casos de uso - Fonoflow 1.0">
+    <mxGraphModel dx="1100" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="boundary" value="Fonoflow 1.0 — Consulta fonética visual" style="swimlane;html=1;startSize=40;horizontal=1;rounded=0;fillColor=#FFFCCB;swimlaneFillColor=#FFFFFF;strokeColor=#355B92;fontColor=#355B92;fontStyle=1;fontSize=17;align=center;" vertex="1" parent="1">
+          <mxGeometry x="330" y="65" width="680" height="635" as="geometry"/>
+        </mxCell>
+        <mxCell id="visitor" value="Visitante" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#FFFFFF;strokeColor=#355B92;fontColor=#355B92;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="90" y="275" width="100" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="consult" value="Consultar palabra en inglés" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#355B92;strokeWidth=2;fontColor=#355B92;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="405" y="145" width="250" height="72" as="geometry"/>
+        </mxCell>
+        <mxCell id="ipa" value="Ver transcripción IPA (en-US)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#355B92;strokeWidth=2;fontColor=#355B92;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="710" y="135" width="240" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="translation" value="Ver traducción al español" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#355B92;strokeWidth=2;fontColor=#355B92;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="710" y="255" width="240" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="visual" value="Ver guía visual de fonemas" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#355B92;strokeWidth=2;fontColor=#355B92;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="710" y="375" width="240" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="audio" value="Escuchar pronunciación (en-US)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#355B92;strokeWidth=2;fontColor=#355B92;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="405" y="375" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="again" value="Realizar nueva búsqueda" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#355B92;strokeWidth=2;fontColor=#355B92;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="405" y="540" width="250" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#355B92;strokeWidth=2;" edge="1" parent="1" source="visitor" target="consult">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#355B92;strokeWidth=2;" edge="1" parent="1" source="visitor" target="audio">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#355B92;strokeWidth=2;" edge="1" parent="1" source="visitor" target="again">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="«include»" style="endArrow=open;endFill=0;dashed=1;dashPattern=7 5;html=1;strokeColor=#666666;" edge="1" parent="1" source="consult" target="ipa">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" value="«include»" style="endArrow=open;endFill=0;dashed=1;dashPattern=7 5;html=1;strokeColor=#666666;" edge="1" parent="1" source="consult" target="translation">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" value="«include»" style="endArrow=open;endFill=0;dashed=1;dashPattern=7 5;html=1;strokeColor=#666666;" edge="1" parent="1" source="consult" target="visual">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="note" value="Nota: los resultados se muestran cuando existen datos. Si falta IPA, traducción, audio o imagen, el sistema informa su ausencia. La validación y los errores son comportamientos internos de la consulta." style="shape=note;whiteSpace=wrap;html=1;fillColor=#F5F7FA;strokeColor=#B6C5D5;fontColor=#355B92;fontSize=12;align=left;spacing=12;" vertex="1" parent="1">
+          <mxGeometry x="345" y="725" width="650" height="75" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
